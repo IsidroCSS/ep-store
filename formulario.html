@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FORMULARIO</title>
+	<link rel="stylesheet" type="text/css" href="css/formulario.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo-carrousel-final.css">
+</head>
+<body>
+
+	<div class="banner">
+		<a href="index.html">
+			<img src="img/logo-blanco.png">
+		</a>
+	</div>
+
+	<div class="menu color2">
+		<ul class="nav">
+			<li><a href="index.html">Inicio</a></li>
+			<li>
+				Categoría<span>►</span>
+				<ul>
+					<li><a href="categoria-textiles.html">Textiles</a></li>
+					<li><a href="categoria-bebibles.html">Bebibles</a></li>
+					<li><a href="categoria-accesorios.html">Accesorios</a></li>
+				</ul>
+			</li>
+			<li><a href="formulario.html">Formulario</a></li>
+		</ul>
+	</div>
+
+	<div class="banner-formulario">
+		<img src="img/banner-formulario.jpg">
+	</div>
+
+	<div class="contenedor-formulario">
+		<div class="container">
+			<div class="">
+				<div class="">
+					<h4>Formulario - INDUMENTARIA MÉDICA</h4>
+					<div class="contact-form">
+						<form name="contact-form" method="post" action="formulario.php">
+	                        <div class="form-group">
+	                        	<label>Nombres completos</label>
+	                            <input type="text" name="name" class="form-control" required>
+	                        </div>
+	                        <div class="form-group">
+	                           	<label>Número de cédula</label>
+	                            <input type="text" name="cedula" class="form-control" required>
+	                        </div>
+	                        <div class="form-group">
+	                           	<label>Número de teléfono</label>
+	                            <input type="text" name="telefono" class="form-control" required>
+	                        </div>
+							<div class="form-group">
+								<label>Correo electrónico</label>
+	                            <input type="text" name="email" class="form-control" required>
+	                        </div>
+							<div class="form-group">
+	                           	<label>Carrera</label>
+		                        <select name="opcion-carrera" id="opcion-carrera" class="form-control">
+									<option value="VETERINARIA">Veterinaria</option>
+									<option value="ENFERMERÍA">Enfermería</option>
+									<option selected="selected" value="PSICOLOGÍA">Psicología</option>
+								</select>
+		                    </div>
+	                        <div class="form-group">
+	                           	<label>Tipo de vestimenta</label>
+		                        <select name="opcion-vestimenta" id="opcion-vestimenta" class="form-control">
+									<option value="SCRUBS">Scrubs</option>
+									<option value="BATA MÉDICA">Bata médica</option>
+									<option selected="selected" value="SCRUBS + BATA MÉDICA">Scrubs + Bata médica</option>
+								</select>
+		                    </div>
+	                        <div class="boton">
+	                           	<button type="submit" name="submit">ENVIAR</button>
+	                        </div>
+	                    </form>
+	                </div>
+	 			</div>
+			</div>			
+		</div>
+
+		<div class="container">
+			<div class="productos">
+				<div class="">
+					<h4>Producto</h4>
+				</div>
+				<div class="titulo">
+					<div><span>VESTIMENTA</span><br><span class="medica">MÉDICA</span></div>
+				</div>
+				<div class="resultado"></div>
+				<div class="imagen">
+					<img src="img/scrubs/scrub-general-upse.png" width="360px">
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+	<div class="maestria-upse">
+		<a href="#">
+			<img src="img/maestrias-upse.png">
+		</a>
+	</div>
+
+	<div class="footer">
+		<div><span>© EP UPSE 2024.</span> Todos los derechos reservados</div>
+	</div>
+
+
+
+	<script type="text/javascript">
+		 // Función para obtener las opciones seleccionadas y mostrarlas en el div de resultado
+    function mostrarSeleccion() {
+        const carrera = document.getElementById('opcion-carrera').value;
+        const vestimenta = document.getElementById('opcion-vestimenta').value;
+
+        const resultadoDiv = document.querySelector('.resultado');
+        resultadoDiv.innerHTML = `<div style="font-weight: bold;">${vestimenta}</div><div style="font-size: .8em;">${carrera}</div>`;
+    }
+
+    // Agregar un evento change a los select para que se llame a la función mostrarSeleccion cuando cambie alguna selección
+    document.getElementById('opcion-carrera').addEventListener('change', mostrarSeleccion);
+    document.getElementById('opcion-vestimenta').addEventListener('change', mostrarSeleccion);
+</script>
+	</script>
+
+</body>
+</html>

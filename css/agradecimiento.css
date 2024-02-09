@@ -1,0 +1,23 @@
+.gracias {
+	text-align: center;
+	font-size: 4em;
+	color: #122447;
+	height: 340px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+.gracias .regresar {
+	font-size: .5em;
+	margin-top: 50px;
+}
+
+.gracias .regresar a {
+	text-decoration: none;
+	background: #FFE000;
+	color: #122447;
+	padding: 8px 20px;
+	border-radius: 15px;
+}
